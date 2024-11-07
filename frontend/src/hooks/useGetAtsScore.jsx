@@ -28,12 +28,12 @@ const useGetAtsScore = (url) => {
           setParsedResumeData(result);
 
           // Calculate a mock ATS score based on resume completeness
-          let score = 70; // Base score
+          let score = 20; // Base score
 
           // Example checks (you can customize these)
-          if (result.skills && result.skills.length >= 5) score += 10;
-          if (result.experience && result.experience.length > 1) score += 10;
-          if (result.education && result.education.length > 0) score += 5;
+          if (result.skills && result.skills.length >= 5) score += 30;
+          if (result.experience && result.experience.length > 1) score += 30;
+          if (result.education && result.education.length > 0) score += 20;
 
           setAtsScore(score);
 

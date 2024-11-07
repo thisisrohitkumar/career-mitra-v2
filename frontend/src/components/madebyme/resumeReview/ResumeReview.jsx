@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./resumeReview.css";
 import loading from "../../../assets/loading.gif";
 import useGetAtsScore from "@/hooks/useGetAtsScore";
+import JsonDisplay from "@/components/JsonDisplay";
 
 const ResumeReview = ({ url }) => {
   // const [parsedResumeData, setParsedResumeData] = useState(null);
@@ -33,6 +34,7 @@ const ResumeReview = ({ url }) => {
   // };
 
   const [showReview, setShowReview] = useState(false);
+  const [showJsonDisplay, setShowJsonDisplay] = useState(false);
   const {
     parsedResumeData,
     atsScore,
@@ -43,6 +45,10 @@ const ResumeReview = ({ url }) => {
 
   const handleGenerateResumeReview = () => {
     setShowReview(true);
+  };
+
+  const handleJsonDisplay = () => {
+    setShowJsonDisplay(true);
   };
 
   return (
@@ -88,7 +94,13 @@ const ResumeReview = ({ url }) => {
             <p className="ats__score">
               ATS Score: <b className="ats">{atsScore}</b>{" "}
               <small className="remark">
-                {atsScore >= 75 ? "Good" : "Needs Improvement"}
+                {atsScore >= 85
+                  ? "Excellent"
+                  : atsScore >= 75
+                  ? "Good"
+                  : atsScore >= 50
+                  ? "Needs Improvement"
+                  : "Poor"}
               </small>
             </p>
 
@@ -102,6 +114,18 @@ const ResumeReview = ({ url }) => {
             ) : (
               <p>No improvement suggestions needed. Your resume looks good!</p>
             )}
+            <div>
+              <span>
+                <button onClick={handleJsonDisplay}>Click here</button> to see
+                how ATS parse your resume
+              </span>
+              <JsonDisplay
+                data={parsedResumeData}
+                className={
+                  showJsonDisplay ? "showJsonDisplay" : "hideJsonDisplay"
+                }
+              />
+            </div>
           </div>
         )}
       </div>
