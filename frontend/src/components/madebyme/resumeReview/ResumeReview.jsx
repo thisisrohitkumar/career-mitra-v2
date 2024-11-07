@@ -114,15 +114,15 @@ const ResumeReview = ({ url }) => {
             ) : (
               <p>No improvement suggestions needed. Your resume looks good!</p>
             )}
-            <div>
+            <div className="json__display">
               <span>
                 <button onClick={handleJsonDisplay}>Click here</button> to see
                 how ATS parse your resume
               </span>
               <JsonDisplay
                 data={parsedResumeData}
-                className={
-                  showJsonDisplay ? "showJsonDisplay" : "hideJsonDisplay"
+                cl={
+                  showJsonDisplay ? "show__json__display" : "hide__json__display"
                 }
               />
             </div>

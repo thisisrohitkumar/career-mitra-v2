@@ -1,8 +1,8 @@
 import React from 'react';
 
-const JsonDisplay = ({ data }) => {
+const JsonDisplay = ({ data, cl }) => {
     return (
-        <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
+        <pre className={cl}>
             {JSON.stringify(data, null, 2)}
         </pre>
     );

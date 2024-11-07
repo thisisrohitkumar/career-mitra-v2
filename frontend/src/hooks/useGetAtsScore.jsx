@@ -14,7 +14,7 @@ const useGetAtsScore = (url) => {
       setIsLoading(true);
       try {
         const myHeaders = new Headers();
-        myHeaders.append("apikey", "8xxqwHuPurGA0HE90d69c49UyP9WkiEr");
+        myHeaders.append("apikey", "GdrBMrHR1LK54Bk5Y7ATYCAXBhf9QSlq");
 
         const requestOptions = {
           method: "GET",
