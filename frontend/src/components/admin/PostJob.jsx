@@ -136,7 +136,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>No of Postion</Label>
+                            <Label>No of Position</Label>
                             <Input
                                 type="number"
                                 name="position"
