@@ -76,8 +76,9 @@ const ResumeReview = ({ url }) => {
 
         <span>
           <button onClick={handleGenerateResumeReview}>
-            Click here to generate resume review
+            Click here
           </button>
+          to generate resume review
         </span>
 
         {isLoading && (
@@ -104,9 +105,9 @@ const ResumeReview = ({ url }) => {
               </small>
             </p>
 
-            <h2>Suggestions for Improvement:</h2>
+            <h2 className="sugg">Suggestions for Improvement:</h2>
             {improvementSuggestions.length > 0 ? (
-              <ul>
+              <ul className="sugg__list">
                 {improvementSuggestions.map((suggestion, index) => (
                   <li key={index}>{suggestion}</li>
                 ))}

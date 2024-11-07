@@ -7,6 +7,30 @@
   margin-top: 10px;
 }
 
+.resume__review__container button{
+  background-color: rgb(250, 66, 66);
+  color: white;
+  padding: 1px 15px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.sugg{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.sugg__list{
+  background-color: #f7c9c9;
+  padding: 10px;
+}
+
+.sugg__listt li{
+  margin-bottom: 5px;
+}
+
 .hide__json__display {
   display: none;
 }
@@ -48,15 +72,17 @@
 }
 
 .ats {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-left: 2px;
+  margin-right: 5px;
 }
 
 .remark {
   font-size: 1rem;
-  background-color: green;
+  background-color: rgb(29, 196, 29);
   color: white;
   border-radius: 50px;
-  padding: 0 15px;
+  padding: 1px 15px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
