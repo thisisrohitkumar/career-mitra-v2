@@ -2,7 +2,7 @@
 const getAts = async (url) => {
   try {
     const myHeaders = new Headers();
-    myHeaders.append("apikey", "GdrBMrHR1LK54Bk5Y7ATYCAXBhf9QSlq");
+    myHeaders.append("apikey", "bsWmSR7u9uiSevxSn44piuXcQU9xfbAo");
 
     const requestOptions = {
       method: "GET",
